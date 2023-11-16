@@ -1,8 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
+import { View, Image, ImageBackground } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import {styles} from './styles';
+import Ellipse1 from '../../assets/Ellipse1.png';
+import Ellipse2 from '../../assets/Ellipse2.png';
 
 export const Home: React.FC = () => {
-  return <View />;
+  return (
+    <View  style={styles.container}>
+        <StatusBar style='auto' />
+        <View style={styles.containerEllipses}>
+        <Image source={Ellipse2} style={styles.ellipseTop}/>
+        <Image source={Ellipse1} style={styles.ellipseBottom}/>
+        </View>
+    </View>
+  )
 }
