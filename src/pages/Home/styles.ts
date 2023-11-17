@@ -1,38 +1,35 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Platform} from 'react-native'
 import theme from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
-    container: {
+    Container: {
         flex: 1,
-        backgroundColor: theme.colors.background,
+        paddingTop: Platform.OS === 'android' ? 40 : 50,
         alignItems: 'center',
-        justifyContent: 'center'
     },
-    containerEllipses:{
-        width: '100%',
-        height: '100%',
-        borderWidth: 1,
-        zIndex: -1
+    header: {
+        width: '80%',
+        flexDirection: 'row'
     },
-    ellipseTop: {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        width: 308,
-        height: 308,
-        resizeMode: 'stretch',
+    title: {
+        fontSize: 18,
+        fontFamily: theme.fonts.bold,
+        color: theme.colors.colorWhite
     },
-    ellipseBottom: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: 308,
-        height: 308,
-        resizeMode: 'stretch'
-    },
-    ContainerBody: {
+    containerNewsMovies: {
         flex: 1,
-        zIndex: 99
+        width: '100%',
+        paddingTop: 10,
+        paddingLeft: 38,
+        gap: 25,
+        justifyContent: 'flex-start',
+        borderWidth: 1,
+        borderColor: 'white'
+    },
+    containerFavorites: {
+        flex: 1,
+        width: '80%',
+        borderWidth: 1,
+        borderColor: 'white'
     }
-
 });
