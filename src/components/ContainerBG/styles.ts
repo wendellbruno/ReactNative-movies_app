@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native'
 import theme from '../../global/styles/theme';
 
+
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -30,9 +31,4 @@ export const styles = StyleSheet.create({
         height: 308,
         resizeMode: 'stretch'
     },
-    ContainerBody: {
-        flex: 1,
-        zIndex: 99
-    }
-
 });
