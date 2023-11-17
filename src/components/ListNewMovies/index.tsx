@@ -4,7 +4,7 @@ import { IMovies } from "../../model";
 import { styles } from "./styles";
 import {useQuery} from 'react-query';
 import { getMovies } from "../../services";
-
+import {AntDesign} from '@expo/vector-icons';
 type Props = {
   movies: IMovies[];
 };
@@ -35,7 +35,10 @@ export const ListNewMovies: React.FC = () => {
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.subtitle}>{item.release_date}</Text>
            </View>
-         
+            <View style={styles.containerAvarege}>
+                <Text>{item.vote_average.toFixed(1)}</Text>
+                <AntDesign name="star" />
+            </View>
 
         </View>
       )}

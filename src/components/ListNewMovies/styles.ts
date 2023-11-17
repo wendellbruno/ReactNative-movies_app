@@ -30,5 +30,18 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.regular,
         fontSize: 10,
         color: theme.colors.colorGray
+    },
+    containerAvarege: {
+        width: 34,
+        height: 50,
+        gap: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: theme.colors.colorYellow,
+        position: 'absolute',
+        right: 1,
+        borderTopRightRadius: 30,
+        borderBottomRightRadius: 10,
+        borderBottomLeftRadius: 10,
     }
 });
