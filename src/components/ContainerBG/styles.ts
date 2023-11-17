@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
     containerEllipses:{
         width: '100%',
         height: '100%',
-        borderWidth: 1,
-        zIndex: -1
+        position: 'absolute',
+        zIndex: -1,
     },
     ellipseTop: {
         position: 'absolute',
@@ -31,4 +31,9 @@ export const styles = StyleSheet.create({
         height: 308,
         resizeMode: 'stretch'
     },
+    containerBody: {
+        width: '100%',
+        height: '100%',
+        zIndex: 99,
+    }
 });

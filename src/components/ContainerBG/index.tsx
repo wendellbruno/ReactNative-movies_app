@@ -15,7 +15,9 @@ export const ContainerBG: React.FC<Props> = ({children}: Props) => {
         <Image source={Ellipse2} style={styles.ellipseTop} />
         <Image source={Ellipse1} style={styles.ellipseBottom} />
       </View>
+      <View style={styles.containerBody}>
       {children}
+      </View>
     </View>
   );
 };
