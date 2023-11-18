@@ -3,7 +3,7 @@ import { View, FlatList, Image, Text } from "react-native";
 import { IMovies } from "../../model";
 import { styles } from "./styles";
 import {useQuery} from 'react-query';
-import { getMovies } from "../../services";
+import { getMoviesNowPlaying } from "../../services";
 import {AntDesign} from '@expo/vector-icons';
 
 export const ListNewMovies: React.FC = () => {
@@ -11,7 +11,7 @@ export const ListNewMovies: React.FC = () => {
   
     const {data} = useQuery({
             queryKey: ['movies'],
-            queryFn: getMovies
+            queryFn: getMoviesNowPlaying
         })
 
   return (

@@ -16,7 +16,7 @@ export const api = axios.create({
 
 
 
-export const getMovies = async () => {
+export const getMoviesNowPlaying = async () => {
   try {
     const {data} = await api.get(
       "movie/now_playing", {
@@ -46,6 +46,25 @@ export const getTvSeries = async () => {
     });
     const tvSeries: ITvSeries[] = data.results
     return tvSeries;
+  
+  } catch ({ response }: AxiosError | any) {
+    console.log(response);
+  }
+};
+
+
+export const getMoviesDiscover = async () => {
+  try {
+    const {data} = await api.get(
+      "discover/movie", {
+      params: {
+        api_key: API_KEY,
+        language: "pt-BR",
+        page: 1,
+      },
+    });
+    const moviesDiscover: IMovies[] = data.results
+    return moviesDiscover;
   
   } catch ({ response }: AxiosError | any) {
     console.log(response);
