@@ -1,3 +1,4 @@
 export * from './ContainerBG';
 export * from './ListNewMovies';
-export * from './ListSeriesTv';
+export * from './ListNewSeriesTv';
+export * from './ListMovies';

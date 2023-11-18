@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export const Movies: React.FC = () => {
+export const SeriesTV: React.FC = () => {
   return <View />;
 }

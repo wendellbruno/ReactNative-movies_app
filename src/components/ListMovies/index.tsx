@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export const Movies: React.FC = () => {
+// import { Container } from './styles';
+
+export const ListMovies: React.FC = () => {
   return <View />;
 }

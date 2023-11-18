@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
     header: {
         width: '80%',
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
         
     },
     title: {
