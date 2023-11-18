@@ -9,27 +9,21 @@ export const styles = StyleSheet.create({
     },
     header: {
         width: '80%',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        
     },
     title: {
         fontSize: 18,
         fontFamily: theme.fonts.bold,
         color: theme.colors.colorWhite
     },
-    containerNewsMovies: {
+    containerMoviesAndSeries: {
         flex: 1,
-        width: '100%',
         paddingTop: 10,
-        paddingLeft: 38,
+        paddingLeft: 15,
         gap: 25,
         justifyContent: 'flex-start',
-        borderWidth: 1,
-        borderColor: 'white'
+       
     },
-    containerFavorites: {
-        flex: 1,
-        width: '80%',
-        borderWidth: 1,
-        borderColor: 'white'
-    }
+  
 });

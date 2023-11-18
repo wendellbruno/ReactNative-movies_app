@@ -3,15 +3,15 @@ import { View, FlatList, Image, Text } from "react-native";
 import { IMovies } from "../../model";
 import { styles } from "./styles";
 import {useQuery} from 'react-query';
-import { getMovies } from "../../services";
+import { getTvSeries } from "../../services";
 import {AntDesign} from '@expo/vector-icons';
 
-export const ListNewMovies: React.FC = () => {
+export const ListSeriesTv: React.FC = () => {
 
   
     const {data} = useQuery({
-            queryKey: ['movies'],
-            queryFn: getMovies
+            queryKey: ['series'],
+            queryFn: getTvSeries
         })
 
   return (
@@ -31,7 +31,7 @@ export const ListNewMovies: React.FC = () => {
             />
             </View>
            <View style={styles.containerDescription}> 
-            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.title}>{item.name}</Text>
             <Text style={styles.subtitle}>{item.release_date}</Text>
            </View>
             <View style={styles.containerAvarege}>

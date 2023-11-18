@@ -1,5 +1,5 @@
 import axios, { AxiosError } from "axios";
-import { IMovies } from "../model";
+import { IMovies, ITvSeries } from "../model";
 
 const BASE_URL = "https://api.themoviedb.org/3/";
 const API_KEY = "acc52bd1b22703336fe1f82c94a4c2d9";
@@ -28,6 +28,24 @@ export const getMovies = async () => {
     });
     const movies: IMovies[] = data.results
     return movies
+  
+  } catch ({ response }: AxiosError | any) {
+    console.log(response);
+  }
+};
+
+export const getTvSeries = async () => {
+  try {
+    const {data} = await api.get(
+      "discover/tv", {
+      params: {
+        api_key: API_KEY,
+        language: "pt-BR",
+        page: 1,
+      },
+    });
+    const tvSeries: ITvSeries[] = data.results
+    return tvSeries;
   
   } catch ({ response }: AxiosError | any) {
     console.log(response);
