@@ -70,3 +70,21 @@ export const getMoviesDiscover = async () => {
     console.log(response);
   }
 };
+
+export const getSeriesTvTopRated = async () => {
+  try {
+    const {data} = await api.get(
+      "tv/top_rated", {
+      params: {
+        api_key: API_KEY,
+        language: "pt-BR",
+        page: 1,
+      },
+    });
+    const seriesTopRated: ITvSeries[] = data.results
+    return seriesTopRated;
+  
+  } catch ({ response }: AxiosError | any) {
+    console.log(response);
+  }
+};

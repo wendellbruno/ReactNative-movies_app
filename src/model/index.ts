@@ -15,4 +15,5 @@ export interface ITvSeries {
    poster_path: string;
    vote_average: number;
    overview: string;
+   first_air_date: string;
 }

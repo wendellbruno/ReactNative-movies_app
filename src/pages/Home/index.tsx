@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { ContainerBG, ListNewMovies, ListSeriesTv } from "../../components";
+import { ContainerBG, ListNewMovies, ListNewSeriesTv } from "../../components";
 import { styles } from "./styles";
 export const Home: React.FC = () => {
     /* const movies = useQuery({
@@ -20,7 +20,7 @@ export const Home: React.FC = () => {
         </View>
         <View style={styles.containerMoviesAndSeries}>
             <Text style={styles.title}>Series TV</Text>
-            <ListSeriesTv />
+            <ListNewSeriesTv />
         </View>
       </View>
     </ContainerBG>

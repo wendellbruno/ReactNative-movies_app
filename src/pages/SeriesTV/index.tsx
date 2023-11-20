@@ -1,6 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ContainerBG, ListSeriesTV } from '../../components';
 
 export const SeriesTV: React.FC = () => {
-  return <View />;
+  return (
+    <ContainerBG>
+      <ListSeriesTV />
+    </ContainerBG>
+  );
 }

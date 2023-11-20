@@ -6,7 +6,7 @@ import {useQuery} from 'react-query';
 import { getTvSeries } from "../../services";
 import {AntDesign} from '@expo/vector-icons';
 
-export const ListSeriesTv: React.FC = () => {
+export const ListNewSeriesTv: React.FC = () => {
 
   
     const {data} = useQuery({
@@ -32,7 +32,6 @@ export const ListSeriesTv: React.FC = () => {
             </View>
            <View style={styles.containerDescription}> 
             <Text style={styles.title}>{item.name}</Text>
-            <Text style={styles.subtitle}>{item.release_date}</Text>
            </View>
             <View style={styles.containerAvarege}>
                 <Text>{item.vote_average.toFixed(1)}</Text>
