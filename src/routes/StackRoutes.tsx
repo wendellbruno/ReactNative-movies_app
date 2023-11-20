@@ -1,8 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
+import {DrawerRoutes} from './DrawerRoutes';
+import {createStackNavigator} from '@react-navigation/stack'
 
-// import { Container } from './styles';
-
+const Stack = createStackNavigator();
 export const StackRoutes: React.FC = () => {
-  return <View />;
+  return (
+    <Stack.Navigator
+    screenOptions={{
+      headerShown: false
+    }}
+    >
+      <Stack.Screen name='App' component={DrawerRoutes} />
+    </Stack.Navigator>
+  );
 }

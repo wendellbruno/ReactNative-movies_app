@@ -8,7 +8,7 @@ import { styles } from './styles';
 
 export const ListSeriesTV: React.FC = () => {
     const { data } = useQuery({
-        queryKey: ["MovieDiscover"],
+        queryKey: ["SeriesTvTopRated"],
         queryFn: getSeriesTvTopRated,
       });
 
