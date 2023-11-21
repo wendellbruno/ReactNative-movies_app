@@ -1,7 +1,7 @@
 # Dev TV with React Native
 
 Aplicativo de catalogo de filmes e series de TV <br />
-foi ultilizado a API TMDB para consulmir os dados , <br />
+foi utilizado a API TMDB para consumir os dados , <br />
 contendo navegação em Drawer para as principais paginas e Stack para a paginas de detalhes.
 
 ## Tecnologias ultilzidas : <br />
