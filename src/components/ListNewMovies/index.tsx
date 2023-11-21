@@ -1,6 +1,5 @@
 import React from "react";
 import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
-import { IMovies } from "../../model";
 import { styles } from "./styles";
 import { useQuery } from "react-query";
 import { getMoviesNowPlaying } from "../../services";

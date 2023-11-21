@@ -2,11 +2,16 @@ import React from 'react';
 import { View, FlatList, Text, SafeAreaView, Image } from "react-native";
 import { useQuery } from "react-query";
 import { getSeriesTvTopRated } from '../../services';
-import { MaterialCommunityIcons, AntDesign, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
+import {useRootesHook} from '../../hooks';
 
 import { styles } from './styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export const ListSeriesTV: React.FC = () => {
+
+    const {navigate} = useRootesHook();
+
     const { data } = useQuery({
         queryKey: ["SeriesTvTopRated"],
         queryFn: getSeriesTvTopRated,
@@ -30,6 +35,9 @@ export const ListSeriesTV: React.FC = () => {
               showsVerticalScrollIndicator = {false}
               ItemSeparatorComponent={() => <View style={{marginBottom: 20}} />}
               renderItem={({ item }) => (
+                <TouchableOpacity
+                onPress={() => navigate('Detail', {data: item, type: 'tv'})}
+                >
                 <View style={styles.containerCard}>
                   <View style={styles.containerImgMovie}>
                   <Image 
@@ -50,6 +58,7 @@ export const ListSeriesTV: React.FC = () => {
                     <AntDesign name="star" />
                   </View>
                 </View>
+                </TouchableOpacity>
               )}
             />
           </View>

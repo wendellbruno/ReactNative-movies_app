@@ -1,12 +1,14 @@
 import React from "react";
-import { View, FlatList, Text, SafeAreaView, Image } from "react-native";
+import { View, FlatList, Text, SafeAreaView, Image, TouchableOpacity } from "react-native";
 import { useQuery } from "react-query";
 import { getMoviesDiscover } from "../../services";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
+import {useRootesHook} from '../../hooks';
 
 import { styles } from "./styles";
 
 export const ListMovies: React.FC = () => {
+  const {navigate} = useRootesHook();
   const { data } = useQuery({
     queryKey: ["MovieDiscover"],
     queryFn: getMoviesDiscover,
@@ -29,6 +31,10 @@ export const ListMovies: React.FC = () => {
           showsVerticalScrollIndicator = {false}
           ItemSeparatorComponent={() => <View style={{marginBottom: 20}} />}
           renderItem={({ item }) => (
+            <TouchableOpacity
+            onPress={() => navigate('Detail', {data: item, type: 'movie'})}
+            >
+
             <View style={styles.containerCard}>
               <View style={styles.containerImgMovie}>
               <Image 
@@ -48,6 +54,8 @@ export const ListMovies: React.FC = () => {
                 <AntDesign name="star" />
               </View>
             </View>
+            </TouchableOpacity>
+
           )}
         />
       </View>

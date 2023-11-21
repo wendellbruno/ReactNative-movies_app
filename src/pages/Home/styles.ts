@@ -14,6 +14,11 @@ export const styles = StyleSheet.create({
         justifyContent: 'center'
         
     },
+    titleHeader:{
+        fontSize: 25,
+        fontFamily: theme.fonts.bold,
+        color: theme.colors.colorYellow
+    },
     title: {
         fontSize: 18,
         fontFamily: theme.fonts.bold,

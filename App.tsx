@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import { useFonts, Roboto_700Bold, Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto';
-import { Home } from './src/pages';
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RoutesApp } from './src/routes';
 
