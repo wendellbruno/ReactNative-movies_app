@@ -21,5 +21,9 @@ Após baixar todas dependencias :
 ### `npm start`
 
 
+https://github.com/wendellbruno/movies_app/assets/79750052/8e997bca-4cc8-4525-bd22-0f4ed0381e01
+
+
+
 
 
