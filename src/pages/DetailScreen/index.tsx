@@ -3,6 +3,7 @@ import { View, Text, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { ParamListBase } from "@react-navigation/native";
+import {BackButton} from '../../components';
 
 export const DetailScreen: React.FC = ({ route }: ParamListBase) => {
   //@ts-ignore
@@ -11,6 +12,7 @@ export const DetailScreen: React.FC = ({ route }: ParamListBase) => {
 
   return (
     <View style={styles.container}>
+      <BackButton />
       <View style={styles.containerimg}>
         <Image
           source={{
